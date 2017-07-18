@@ -1,0 +1,22 @@
+ <div id="mySideNav" class="sidenav w3-sidebar w3-bar-block">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="addtrack.html"><b class="glyphicon glyphicon-download-alt" aria-hidden="true"></b> Add a Track</a>
+  </div>
+<div class="col-xs-12">
+
+      <ul class="list-group">
+        <li class="list-group-item text-center clearfix" ng-repeat="track in TrackNames | orderBy:'DateOfRealease'">
+          <button type="button" class="btn btn-sm btn-success pull-left">
+          <span class="glyphicon glyphicon-unchecked"></span>
+          </button>
+          <span style="font-weight:bolder" class="details">{{track.trackName|uppercase}}</span>
+          <br>
+          <span style="font-weight:lighter" class="text-muted" id="details">Genre: {{track.Genre}}</span>
+          <br>
+          <span style="font-weight:lighter" class="text-muted">Artist: {{track.Artist}}</span>
+          <button type="button" class="btn btn-sm btn-success pull-right">
+          <span class="glyphicon glyphicon-pencil"></span>
+          </button>
+        </li>
+      </ul>
+    </div>
